@@ -3,23 +3,21 @@ body{
     margin:0;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
-
 .navbar-name{
-    background-color : BLACK;
+    background-color :black;
     float : left;
     position: absolute;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-left: 2em;
     margin-bottom: 2em;
 }
-
 .navbar-container{
     position : absolute;
-    background-color: BLACK;
+    background-color: black ;
     width : 100%;
 }
-
 .navbar-container a{
+    position: relative;
     text-decoration: none;
     color : WHITE;
     letter-spacing: 15px;
@@ -42,6 +40,44 @@ body{
 }
 
 .links a:hover {
-    color: #8186d5;
+    color:black;
+}
+button{
+    position: absolute;
+    height: 50px;
+    left: 15%;
+    top: 21%;
+}
+.test-img{
+    position: absolute;
+    left: 15%;
+    top: 30%;
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center left;
 }
 
+.test-img:hover{
+    background-size:1000px; 
+}
+
+.welcome-text{
+    position: absolute;
+    background-color: white;
+    color:black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 10%;
+    left: 32%;
+}
+
+.horizontal-line{
+  height: 0%; /* Full-height: remove this if you want "auto" height */
+  width: 100%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 18%; /* Stay at the top */
+  left: 0;
+  background-color: black; 
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px;
+}
