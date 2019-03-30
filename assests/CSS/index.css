@@ -6,10 +6,7 @@ body{
 .navbar-name{
     background-color :black;
     float : left;
-    position: absolute;
-    font-size: 100%;
-    max-width: 100%;
-    height: auto;
+    position: relative;
     margin-top: 1em;
     margin-left: 2em;
     margin-bottom: 2em;
@@ -26,7 +23,8 @@ body{
     padding: 8px;
     color : WHITE;
     width: 100%;
-    letter-spacing: auto;
+    letter-spacing: 100%;
+    font-size: 100%;
 }
 
 .links li {
@@ -48,21 +46,21 @@ body{
 }
 
 .links a:hover {
-    color:black;
+    color:blue;
 }
 button{
     position: absolute;
     max-width: 100%;
     height: auto;
-    left: 15%;
-    top: 21%;
+    left: auto;
+    top: auto;
 }
 .test-img{
     position: absolute;
-    left: 15%;
-    top: 30%;
-    max-width: 100%;
+    top : 50%;
+    width: 100%;
     height: auto;
+    padding:30px ;
 }
 
 .test-img:hover{
@@ -73,13 +71,15 @@ button{
     position: absolute;
     color:black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 100%;
-    top: 10%;
-    left: 32%;
+    font-size: 10%;
+    top: 25%;
+    left: 10%;
 }
 .emoji{
-    max-width: 100%;
+    position: absolute;
+    width: 20%;
     height: auto;
+    padding-top: 10px;
 }
 .horizontal-line{
   height: auto; /* Full-height: remove this if you want "auto" height */
@@ -91,4 +91,12 @@ button{
   background-color: black; 
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 10px;
+}
+
+@media only screen and (min-width: 400px) {
+ 
+}
+
+@media only screen and (min-width: 1000x) {
+ 
 }
