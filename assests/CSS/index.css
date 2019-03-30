@@ -7,6 +7,9 @@ body{
     background-color :black;
     float : left;
     position: absolute;
+    font-size: 100%;
+    max-width: 100%;
+    height: auto;
     margin-top: 1em;
     margin-left: 2em;
     margin-bottom: 2em;
@@ -14,21 +17,26 @@ body{
 .navbar-container{
     position : absolute;
     background-color: black ;
-    width : 100%;
+    width: 100%;
+    height: auto;
 }
 .navbar-container a{
     position: relative;
     text-decoration: none;
+    padding: 8px;
     color : WHITE;
-    letter-spacing: 15px;
+    width: 100%;
+    letter-spacing: auto;
 }
 
 .links li {
     list-style-type : none;
     display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100%;
     margin-top: 1em;
     margin-bottom : 1em;
-    margin-right : 2em;
+    margin-right : 1em; 
 }
 
 .navbar-links{
@@ -44,7 +52,8 @@ body{
 }
 button{
     position: absolute;
-    height: 50px;
+    max-width: 100%;
+    height: auto;
     left: 15%;
     top: 21%;
 }
@@ -52,28 +61,30 @@ button{
     position: absolute;
     left: 15%;
     top: 30%;
-    background-size: 200%;
-    background-repeat: no-repeat;
-    background-position: center left;
+    max-width: 100%;
+    height: auto;
 }
 
 .test-img:hover{
-    background-size:1000px; 
+    background-size:50%; 
 }
 
 .welcome-text{
     position: absolute;
-    background-color: white;
     color:black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
     top: 10%;
     left: 32%;
 }
-
+.emoji{
+    max-width: 100%;
+    height: auto;
+}
 .horizontal-line{
-  height: 0%; /* Full-height: remove this if you want "auto" height */
-  width: 100%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width:100% ; /* Set the width of the sidebar */
+  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 18%; /* Stay at the top */
   left: 0;
