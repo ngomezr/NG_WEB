@@ -1,102 +1,186 @@
-body{
-    background-color : lightgray;
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
     margin:0;
-    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
-.navbar-name{
-    background-color :black;
-    float : left;
-    position: relative;
-    margin-top: 1em;
-    margin-left: 2em;
-    margin-bottom: 2em;
+
+body {
+    line-height:1;
 }
-.navbar-container{
-    position : absolute;
-    background-color: black ;
-    width: 100%;
-    height: auto;
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
 }
-.navbar-container a{
-    position: relative;
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+
+/* MY CODE  STARTS UNDER HERE*/
+* {
     text-decoration: none;
-    padding: 8px;
-    color : WHITE;
+}
+
+body{
+    background-color : #f3f3f3;
+}
+header {
+    background-color: white;
     width: 100%;
-    letter-spacing: 100%;
-    font-size: 100%;
+    height: 100px;
 }
-
-.links li {
-    list-style-type : none;
-    display: inline-block;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 100%;
-    margin-top: 1em;
-    margin-bottom : 1em;
-    margin-right : 1em; 
-}
-
-.navbar-links{
-    float: right;
-}
-
-.navbar-links ul{
-    float : right;
-}
-
-.links a:hover {
-    color:blue;
-}
-button{
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    left: auto;
-    top: auto;
-}
-.test-img{
-    position: absolute;
-    top : 50%;
-    width: 100%;
-    height: auto;
-    padding:30px ;
-}
-
-.test-img:hover{
-    background-size:50%; 
-}
-
-.welcome-text{
-    position: absolute;
+ 
+header .header-brand {
+    font-family: Catamaran;
+    font-size :24px;
+    font-weight : 900;
     color:black;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10%;
-    top: 25%;
-    left: 10%;
-}
-.emoji{
-    position: absolute;
-    width: 20%;
-    height: auto;
-    padding-top: 10px;
-}
-.horizontal-line{
-  height: auto; /* Full-height: remove this if you want "auto" height */
-  width:100% ; /* Set the width of the sidebar */
-  position: absolute; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 18%; /* Stay at the top */
-  left: 0;
-  background-color: black; 
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 10px;
+    text-transform: uppercase;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
 }
 
-@media only screen and (min-width: 400px) {
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    
+}
+header nav ul li {
+    display: inline-block;
+    float: left;
+    list-style: none;
+    padding : 0 16px;
+}
+
+header nav ul li a {
+    font-family: Catamaran;
+    font-size :16px;
+    color:black;
+}
+
+header .header-cases {
+    display:none;
+}
+
+/*INDEX*/
+
+.index-banner {
+    width:100%;
+    height: calc(100vh - 100px);
+    background-image: url("/assests/img/Running.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover; 
+}
+
+.index-banner h2 {
+    font-family: Catamaran;
+    font-size :60px;
+    color:white;
+    text-align: center;
+    line-height: 70px;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px black;
+}
+
+.index-banner h1 {
+    font-family: Cormorant Garamond;
+    font-size :28px;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 40px;
+    color:white;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+}
+
+/* @media only screen and (min-width: 400px) {
  
 }
 
 @media only screen and (min-width: 1000x) {
  
-}
+} */
