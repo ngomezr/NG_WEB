@@ -3,3 +3,17 @@ body{
     margin:0;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
+
+.img-test{
+    width:100%;
+    height: calc(100vh - 300px);
+    background-image: url("https://cdn.vox-cdn.com/thumbor/im3DV37lGwiMGiX_FoTVhh92MTM=/0x0:1920x945/1200x480/filters:focal(807x320:1113x626)/cdn.vox-cdn.com/uploads/chorus_image/image/60757935/ply_best_manga_2018.1533678249.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 200%; 
+    display: table;
+}
+
+.img-test:hover{
+    background-size: 100%;
+}
