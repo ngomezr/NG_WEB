@@ -105,6 +105,7 @@ body{
     background-color : #f3f3f3;
 }
 header {
+    position: fixed;
     background-color: white;
     width: 100%;
     height: 100px;
@@ -149,7 +150,7 @@ header .header-cases {
 .index-banner {
     width:100%;
     height: calc(100vh - 100px);
-    background-image: url("/assests/img/Running.jpg");
+    background-image: url("/assests/img/real-space-wallpaper-5.jpg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover; 
@@ -169,6 +170,7 @@ header .header-cases {
     line-height: 70px;
     font-weight: 900;
     text-shadow: 2px 2px 8px black;
+    padding: 0 25px;
 }
 .index-banner h1 {
     font-family: Cormorant Garamond;
@@ -179,11 +181,12 @@ header .header-cases {
     color:white;
     text-align: center;
     text-shadow: 2px 2px 8px black;
+    padding: 5px 5px;
 }
 
 .index-links div {
     margin: 16px 16px 0;
-    width: calc(100% - 32px);
+    width: calc(100% - 10px);
     height: 100px;
     background-color: lightgray;
 }
@@ -196,6 +199,11 @@ header .header-cases {
     color:black;
     text-align: center;
     text-transform: uppercase;
+}
+
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
 }
 
 /* @media only screen and (min-width: 400px) {
