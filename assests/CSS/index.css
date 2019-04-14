@@ -1,183 +1,164 @@
-/* 
-html5doctor.com Reset Stylesheet
-v1.6.1
-Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
-Twitter: @rich_clark
-*/
-
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code,
-del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var,
-b, i,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-body {
-    line-height:1;
-}
-
-article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
-    display:block;
-}
-
-nav ul {
-    list-style:none;
-}
-
-blockquote, q {
-    quotes:none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content:'';
-    content:none;
-}
-
-a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-}
-
-/* change colours to suit your needs */
-ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
-}
-
-/* change colours to suit your needs */
-mark {
-    background-color:#ff9;
-    color:#000; 
-    font-style:italic;
-    font-weight:bold;
-}
-del {
-    text-decoration: line-through;
-}
-abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
-}
-table {
-    border-collapse:collapse;
-    border-spacing:0;
-}
-/* change border colour to suit your needs */
-hr {
-    display:block;
-    height:1px;
-    border:0;   
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
-}
-input, select {
-    vertical-align:middle;
-}
 
 /* MY CODE  STARTS UNDER HERE*/
 * {
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing : border-box;
 }
 
-body{
-    background-color : #f3f3f3;
+html{
+    font-size: 10px;
+    font-family: "Roboto Cn",sans-serif;
 }
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
 header {
-    position: fixed;
-    background-color:black;
     width: 100%;
-    height: 100px;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.3)), url("/assests/img/real-space-wallpaper-5.jpg") center no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
- 
-header .header-brand {
-    font-family: Catamaran;
-    font-size :24px;
-    font-weight : 900;
-    color:white;
-    text-transform: uppercase;
-    display: block;
+
+.container{
+    max-width: 120rem;
+    width: 90%;
     margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
+}
+
+.menu-toggle{
+    position: fixed;
+    top: 2.5rem;
+    right : 2.5rem;
+    color: #eeeeee;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 1000;
+    display: none;
+}
+
+header nav{
+    padding-top:5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+header .header-brand {
+    font-size :3rem;
+    font-weight :300;
+    color:white;
+    transform: translateX(-100rem);
+    animation: slideIn .5s forwards;
 }
 
 header nav ul {
-    display: block;
-    margin: 0 auto;
-    width: fit-content;
-    
+    display: flex;
 }
 header nav ul li {
-    display: inline-block;
     list-style: none;
-    padding : 0 16px;
+    transform: translateY(100rem);
+    animation: slideIn .5s forwards;
 }
-
-header nav ul li a {
-    font-family: Catamaran;
-    font-size :16px;
-    color:white;
-}
-
 header .header-cases {
     display:none;
 }
 
+header nav ul li:nth-child(1){
+    animation-delay: 0s;
+}
+
+header nav ul li:nth-child(2){
+    animation-delay: .5s;
+}
+
+header nav ul li:nth-child(3){
+    animation-delay: 1s;
+}
+header nav ul li:nth-child(4){
+    animation-delay: 1.5s;
+}
+
+header nav ul li a{
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+header nav ul li a:last-child{
+    margin-right: 0;
+}
+
+header nav ul li a::before,
+header nav ul li a::after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height:2px;
+    background-color: crimson;
+    left:0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+header nav ul li a::before{
+    top: 0;
+    transform-origin: left;
+}
+
+header nav ul li a::after{
+    bottom: 0;
+    transform-origin: right;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,.95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: opacity 650ms;
+    transform: scale(0);
+    opacity: 0;
+    display: none;
+}
+
+header ul li a:hover::before,
+header ul li a:hover:after{
+    transform: scaleX(1);
+}
+
+@keyframes slideIn {
+	from{
+
+	}
+	to{
+		transform: translateX(0);
+	}
+}
+
 /*INDEX*/
-/* .index-banner {
-    width:100%;
-    height: calc(100vh - 100px);
-    background-image: url("/assests/img/real-space-wallpaper-5.jpg");
-    background-repeat: no-repeat;
-    background-position:center;
-    background-size: cover; 
-    display: table;
-} */
-
-.parallax-1 {
-    height:600px;
-    width:100%;
-    text-align: center;
-}
-.parallax-inner{
-    padding-top: 120px;
-    padding-bottom: 200px;
-}
-
 .title-statement h2 {
-    font-family: Catamaran;
-    font-size :31px;
+    margin-top:10%;
+    margin-bottom: 5%;
+    font-size :30px;
     color:white;
     text-align: center;
-    line-height: 70px;
-    font-weight: 900;
+    line-height: 65px;
+    font-weight: 800;
     text-shadow: 2px 2px 8px black;
 }
 .title-statement h1 {
-    font-family: Cormorant Garamond;
-    font-size :28px;
+    font-size :26px;
     font-weight: 100;
     font-style: italic;
     line-height: 40px;
@@ -185,37 +166,79 @@ header .header-cases {
     text-align: center;
     text-shadow: 2px 2px 8px black;
 }
-.index-texts {
-    margin-right: auto;
-    margin-left:auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: black;
-}
-.index-text div h3{
-    font-family: Catamaran;
-    font-size :28px;
-    font-weight: 600;
-    line-height: 100px;
-    color:black;
-    text-align: center;
-    text-transform: uppercase;
-}
-.clearfix{
-    clear: both;
-}
-.parallax-window {
-    height:568px;
-    width:100%;
-    display:block;
+
+.social-icons {
+    height: 10em;
+    position: relative;
 }
 
-/* @media only screen and (min-width: 400px) {
- 
+.social-icons ul{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.social-icons li{
+    list-style: none;
+    margin: 50px 30px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: .5s;
 }
 
-@media only screen and (min-width: 1000x) {
- 
-} */
+.social-icons li:hover{
+    color: crimson;
+    border: 5px solid crimson;
+    transition: .3s;
+}
+
+
+@media screen and (max-width: 700px) {
+    /* .social-wrapper{
+        margin-left: auto;
+        margin-right: auto;
+    } */
+    .menu-toggle{
+        display: block;
+    }
+
+    header nav{
+        padding-top: 0;
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    header nav ul{
+        flex-direction: column;
+    }
+
+    header ul li{
+        margin-top: 5rem;
+    }
+
+    header nav ul li a{
+        margin:0;
+        font-size: 2.5rem;
+    }
+
+    header .header-brand{
+        font-size: 5rem; 
+    }
+
+    .overlay.menu-open,
+    header nav.menu-open{
+        display: flex;
+        transform: scale(1);
+        opacity: 1;
+    }
+} 
