@@ -13,21 +13,26 @@ html{
 
 a{
     text-decoration: none;
-    color: #eee;
+    color:white;
 }
 
-header {
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.3)), url("/assests/img/real-space-wallpaper-5.jpg") center no-repeat;
+body, html{
+    height: 100%;
+    margin: 0;
+} 
+
+.image-cover{
+    background-image: url("/assests/img/real-space-wallpaper-5.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    overflow: hidden;
 }
 
 .container{
     max-width: 120rem;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -42,7 +47,7 @@ header {
     display: none;
 }
 
-header nav{
+body nav{
     padding-top:5rem;
     display: flex;
     justify-content: space-between;
@@ -51,7 +56,7 @@ header nav{
     font-size: 1.6rem;
 }
 
-header .header-brand {
+body .header-brand {
     font-size :3rem;
     font-weight :300;
     color:white;
@@ -59,46 +64,46 @@ header .header-brand {
     animation: slideIn .5s forwards;
 }
 
-header nav ul {
+body nav ul {
     display: flex;
 }
-header nav ul li {
+body nav ul li {
     list-style: none;
     transform: translateY(100rem);
     animation: slideIn .5s forwards;
 }
-header .header-cases {
+body .header-cases {
     display:none;
 }
 
-header nav ul li:nth-child(1){
+body nav ul li:nth-child(1){
     animation-delay: 0s;
 }
 
-header nav ul li:nth-child(2){
+body nav ul li:nth-child(2){
     animation-delay: .5s;
 }
 
-header nav ul li:nth-child(3){
+body nav ul li:nth-child(3){
     animation-delay: 1s;
 }
-header nav ul li:nth-child(4){
+body nav ul li:nth-child(4){
     animation-delay: 1.5s;
 }
 
-header nav ul li a{
+body nav ul li a{
     padding: 1rem 0;
     margin: 0 3rem;
     position: relative;
     letter-spacing: 2px;
 }
 
-header nav ul li a:last-child{
+body nav ul li a:last-child{
     margin-right: 0;
 }
 
-header nav ul li a::before,
-header nav ul li a::after{
+body nav ul li a::before,
+body nav ul li a::after{
     content: '';
     position:absolute;
     width: 100%;
@@ -109,12 +114,12 @@ header nav ul li a::after{
     transition: all .5s;
 }
 
-header nav ul li a::before{
+body nav ul li a::before{
     top: 0;
     transform-origin: left;
 }
 
-header nav ul li a::after{
+body nav ul li a::after{
     bottom: 0;
     transform-origin: right;
 }
@@ -132,8 +137,8 @@ header nav ul li a::after{
     display: none;
 }
 
-header ul li a:hover::before,
-header ul li a:hover:after{
+body ul li a:hover::before,
+body ul li a:hover:after{
     transform: scaleX(1);
 }
 
@@ -147,9 +152,11 @@ header ul li a:hover:after{
 }
 
 /*INDEX*/
+.title-statement{
+    align-self: auto;
+}
 .title-statement h2 {
-    margin-top:10%;
-    margin-bottom: 5%;
+    padding-top: 100px;
     font-size :30px;
     color:white;
     text-align: center;
@@ -168,7 +175,7 @@ header ul li a:hover:after{
 }
 
 .social-icons {
-    height: 10em;
+    height: 20em;
     position: relative;
 }
 
@@ -182,10 +189,9 @@ header ul li a:hover:after{
 }
 .social-icons li{
     list-style: none;
-    margin: 50px 30px;
     display: inline-block;
-    font-size: 20px;
-    padding: 20px 20px;
+    font-size: 30px;
+    padding: 25px 30px;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 50%;
@@ -200,20 +206,16 @@ header ul li a:hover:after{
 
 
 @media screen and (max-width: 700px) {
-    .social-icons li{
-        margin: 40px 20px;
-    }
-
-    .title-statement h2{
-        margin-top: 15%;
-        font-size:28px; 
+    .social-icons li{ 
+        font-size: 40px;
+        padding: 15px 15px;
     }
     
     .menu-toggle{
         display: block;
     }
 
-    header nav{
+    body nav{
         padding-top: 0;
         display: none;
         flex-direction: column;
@@ -223,27 +225,28 @@ header ul li a:hover:after{
         text-align: center;
     }
 
-    header nav ul{
+    body nav ul{
         flex-direction: column;
     }
 
-    header ul li{
+    body ul li{
         margin-top: 5rem;
     }
 
-    header nav ul li a{
+    body nav ul li a{
         margin:0;
         font-size: 2.5rem;
     }
 
-    header .header-brand{
+    body .header-brand{
         font-size: 5rem; 
     }
 
     .overlay.menu-open,
-    header nav.menu-open{
+    body nav.menu-open{
         display: flex;
         transform: scale(1);
         opacity: 1;
     }  
+
 } 
