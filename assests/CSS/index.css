@@ -63,11 +63,14 @@ body nav{
 }
 
 body .header-brand {
-    font-size :3rem;
-    font-weight :300;
-    color:white;
+    font-size: 40px;
+    letter-spacing: 10px;
     transform: translateX(-100rem);
     animation: slideIn .5s forwards;
+}
+
+body .header-brand span{
+    color: crimson;
 }
 
 body nav ul {
@@ -186,8 +189,8 @@ body ul li a:hover:after{
 }
 
 .social-icons ul{
-    margin: 0;
     position: absolute;
+    margin: 0;
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -197,7 +200,7 @@ body ul li a:hover:after{
     list-style: none;
     display: inline-block;
     font-size: 40px;
-    padding: 25px 30px; 
+    padding: 20px 25px; 
     color: #fff;
     border: 1px solid #fff;
     border-radius: 50%;
@@ -214,7 +217,7 @@ body ul li a:hover:after{
 @media screen and (max-width: 700px) {
     .social-icons li{ 
         font-size: 40px;
-        padding: 15px 15px;
+        padding: 10px 15px;
     }
     
     .menu-toggle{
