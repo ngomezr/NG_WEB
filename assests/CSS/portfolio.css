@@ -19,6 +19,17 @@ body, html{
     margin: 0;
 } 
 
+body .header-brand {
+    font-size: 20px;
+    letter-spacing: 10px;
+    transform: translateX(-100rem);
+    color: black;
+    animation: slideIn .5s forwards;
+}
+
+body .header-brand span{
+    color: crimson;
+}
 body nav{
     padding-top:5rem;
     display: flex;
