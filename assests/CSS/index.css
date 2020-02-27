@@ -1,4 +1,3 @@
-
 /* MY CODE  STARTS UNDER HERE*/
 * {
     margin: 0;
@@ -63,7 +62,7 @@ body nav{
 }
 
 body .header-brand {
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 10px;
     transform: translateX(-100rem);
     animation: slideIn .5s forwards;
@@ -248,7 +247,7 @@ body ul li a:hover:after{
     }
 
     body .header-brand{
-        font-size: 5rem; 
+        font-size: 2.5em; 
     }
 
     .overlay.menu-open,
